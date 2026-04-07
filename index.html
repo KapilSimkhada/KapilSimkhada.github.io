@@ -1,89 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kapil Simkhada</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
+      background: #f7f9fb;
+      color: #1f2937;
       line-height: 1.6;
-      color: #222;
     }
-    h1, h2 {
-      color: #0b4f6c;
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    nav h2 {
+      color: #0b5c8a;
+      font-size: 1.4rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 22px;
+    }
+
     nav a {
-      margin-right: 15px;
       text-decoration: none;
-      color: #0b4f6c;
+      color: #0b5c8a;
       font-weight: bold;
     }
-    .section {
-      margin-top: 40px;
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 0;
     }
-    .button {
+
+    .hero-text {
+      flex: 1 1 550px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      color: #0b5c8a;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h3 {
+      font-weight: normal;
+      margin-bottom: 20px;
+      color: #374151;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-image {
+      flex: 1 1 250px;
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+
+    .buttons a {
       display: inline-block;
-      padding: 10px 16px;
-      background: #0b4f6c;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
+      margin-right: 12px;
       margin-top: 10px;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: #0b5c8a;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #0b5c8a;
+      border: 2px solid #0b5c8a;
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #0b5c8a;
+      margin-bottom: 20px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    }
+
+    .card h3 {
+      color: #0b5c8a;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 0;
+      background: white;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 30px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#skills">Skills</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
-  </nav>
 
-  <h1>Kapil Simkhada</h1>
-  <p>M.S. Student in Plant Pathology, North Dakota State University</p>
+  <header>
+    <div class="container">
+      <nav>
+        <h2>Kapil Simkhada</h2>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#cv">CV</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <div class="section" id="about">
-    <h2>About Me</h2>
-    <p>
-      Graduate student in Plant Pathology at NDSU working on soybean cyst nematode (SCN) resistance in soybean and dry bean.
-      Good work ethics, committed and curious learner.
-    </p>
-  </div>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Kapil Simkhada</h1>
+        <h3>M.S. Student in Plant Pathology | North Dakota State University</h3>
+        <p>
+          I am a graduate researcher working on soybean cyst nematode, host resistance,
+          plant breeding, and molecular approaches for disease management. My work integrates
+          field evaluation, controlled-environment screening, and data analysis to support crop improvement.
+        </p>
+        <div class="buttons">
+          <a href="cv.pdf" class="btn-primary" target="_blank">Download CV</a>
+          <a href="#contact" class="btn-secondary">Contact Me</a>
+        </div>
+      </div>
 
-  <div class="section" id="research">
-    <h2>Research</h2>
-    <p>
-      Working on host resistance to soybean cyst nematode (SCN) in both soybean and dry bean. In soybean, conducting resistance screening
-      and evaluating Rhg1 copy number variation (CNV) in breeding lines, along with developing KASP markers for Rhg4-based resistance
-      to support marker-assisted selection (MAS). In dry bean, performing both field and controlled (growth chamber) experiments to 
-      assess resistance responses.
-    </p>
-  </div>
+      <div class="hero-image">
+        <img src="profile.jpg" alt="Kapil Simkhada profile photo">
+      </div>
+    </section>
 
-  <div class="section" id="skills">
-    <h2>Skills</h2>
-    <p>
-      SAS, R, Python, qPCR, statistical analysis, genomics, bioinformatics, plant disease research.
-    </p>
-  </div>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am an M.S. student in Plant Pathology at North Dakota State University. My research
+        focuses on soybean cyst nematode resistance, Rhg1 copy number variation, dry bean and soybean
+        germplasm evaluation, and molecular tools for crop improvement.
+      </p>
+    </section>
 
-  <div class="section" id="cv">
-    <h2>CV</h2>
-    <p>You can upload your CV as a PDF and link it here.</p>
-    <a class="button" href="cv.pdf" target="_blank">Download CV</a>
-  </div>
+    <section id="research">
+      <h2>Research Interests</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Soybean Cyst Nematode</h3>
+          <p>Screening soybean and dry bean germplasm for resistance to important SCN populations.</p>
+        </div>
+        <div class="card">
+          <h3>Rhg1 CNV Analysis</h3>
+          <p>Studying copy number variation and its relationship with phenotypic resistance.</p>
+        </div>
+        <div class="card">
+          <h3>Field and Growth Chamber Studies</h3>
+          <p>Comparing field performance with controlled-environment screening methods.</p>
+        </div>
+        <div class="card">
+          <h3>Data Analysis</h3>
+          <p>Using SAS, R, and Python for experimental analysis, visualization, and interpretation.</p>
+        </div>
+      </div>
+    </section>
 
-  <div class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Email: kapil.simkhada@ndsu.edu</p>
-    <p>LinkedIn: https://www.linkedin.com/in/kapil-simkhada-1542ab1a1/</p>
-    <p>Google Scholar: https://scholar.google.com/citations?user=MBwV6wkAAAAJ&hl=en</p>
-  </div>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Plant Pathology</h3>
+          <p>Disease screening, host resistance evaluation, greenhouse and field trials.</p>
+        </div>
+        <div class="card">
+          <h3>Molecular Tools</h3>
+          <p>qPCR, DNA-based assays, marker-related work, genomics-oriented research.</p>
+        </div>
+        <div class="card">
+          <h3>Data & Statistics</h3>
+          <p>SAS, R, Python, ANOVA, correlation analysis, graphical visualization.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv">
+      <h2>Curriculum Vitae</h2>
+      <p>You can download my CV here:</p>
+      <p><a href="cv.pdf" class="btn-primary" target="_blank">Download CV</a></p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: your.email@ndsu.edu</p>
+      <p>LinkedIn: add your LinkedIn link here</p>
+      <p>Google Scholar: add your Google Scholar link here</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Kapil Simkhada | Academic Website</p>
+  </footer>
+
 </body>
 </html>
